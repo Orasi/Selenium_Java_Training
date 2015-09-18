@@ -16,9 +16,10 @@ import org.testng.annotations.Test;
  *          session
  */
 public class _01_SelectElements {
+	//Define a proxy for the Dropdown link on the homepage
 	@FindBy(linkText = "Dropdown")
 	private WebElement lnkDropdown;
-
+	//Define a proxy for the dropdown list
 	@FindBy(id = "dropdown")
 	private WebElement lstDropdown;
 
