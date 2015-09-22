@@ -216,7 +216,6 @@ public class _01_WaitsAndExpectedConditions {
 				//*	SWITCH TO THE TOP-LEFT FRAME *
 				//********************************
 				// Switch to the top-left child frame
-//				driver.switchTo().frame(leftFrame);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(leftFrame));
 				// Grab the text from the frame
 				frameText = driver.findElement(By.xpath("/html/body")).getText();
@@ -230,10 +229,8 @@ public class _01_WaitsAndExpectedConditions {
 				// Switch to the default content
 				driver.switchTo().defaultContent();
 				// Switch to the top frame
-//				driver.switchTo().frame("frame-top");
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("frame-top"));
 				// Switch to the top-middle frame
-//				driver.switchTo().frame(middleFrame);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(middleFrame));
 				// Grab the text from the frame
 				frameText = driver.findElement(By.xpath("/html/body")).getText();
@@ -246,10 +243,8 @@ public class _01_WaitsAndExpectedConditions {
 				// Switch to the default content
 				driver.switchTo().defaultContent();
 				// Switch to the top frame
-//				driver.switchTo().frame("frame-top");
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("frame-top"));
 				// Switch to the top-right frame
-//				driver.switchTo().frame(rightFrame);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(rightFrame));
 				// Grab the text from the frame
 				frameText = driver.findElement(By.xpath("/html/body")).getText();
