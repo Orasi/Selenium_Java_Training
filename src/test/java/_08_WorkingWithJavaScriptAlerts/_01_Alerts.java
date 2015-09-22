@@ -19,8 +19,6 @@ import org.testng.annotations.Test;
 public class _01_Alerts {
 	// Declare a WebDriver
 	WebDriver driver;
-	// Declare a WebDriverWait
-	WebDriverWait wait;
 	// Declare a WebElement
 	WebElement element;
 	// Declare a WebElement that holds the resulting text from interactions
@@ -46,10 +44,8 @@ public class _01_Alerts {
 		element = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(1) > button"));
 		//Click the first alert trigger
 		element.click();
-		//Define a WebDriverWait
-		wait = new WebDriverWait(driver, (long) 10.0);
-		//Wait until an alert is present
-		wait.until(ExpectedConditions.alertIsPresent());
+		//Allow some time for the alert to open
+		Thread.sleep(1000);
 		//Switch to the alert
 		alert = driver.switchTo().alert();
 		//Output the alert text
@@ -74,8 +70,8 @@ public class _01_Alerts {
 		element = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(2) > button"));
 		//Click the second alert trigger
 		element.click();
-		//Wait until an alert is present
-		wait.until(ExpectedConditions.alertIsPresent());
+		//Allow some time for the alert to open
+		Thread.sleep(1000);
 		//Switch to the alert
 		alert = driver.switchTo().alert();
 		//Output the alert text
@@ -95,8 +91,8 @@ public class _01_Alerts {
 		element = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(2) > button"));
 		//Click the second alert trigger again
 		element.click();
-		//Wait until an alert is present
-		wait.until(ExpectedConditions.alertIsPresent());
+		//Allow some time for the alert to open
+		Thread.sleep(1000);
 		//Switch to the alert
 		alert = driver.switchTo().alert();
 		//Output the alert text
@@ -119,8 +115,8 @@ public class _01_Alerts {
 		element = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(3) > button"));
 		//Click the third alert trigger
 		element.click();
-		//Wait until an alert is present
-		wait.until(ExpectedConditions.alertIsPresent());
+		//Allow some time for the alert to open
+		Thread.sleep(1000);
 		//Switch to the alert
 		alert = driver.switchTo().alert();
 		//Output the alert text
@@ -142,8 +138,8 @@ public class _01_Alerts {
 		element = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(3) > button"));
 		//Click the third alert trigger again
 		element.click();
-		//Wait until an alert is present
-		wait.until(ExpectedConditions.alertIsPresent());
+		//Allow some time for the alert to open
+		Thread.sleep(1000);
 		//Switch to the alert
 		alert = driver.switchTo().alert();
 		//Output the alert text

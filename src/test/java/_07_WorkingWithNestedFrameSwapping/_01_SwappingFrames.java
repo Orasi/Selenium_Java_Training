@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 /**
@@ -50,9 +48,6 @@ public class _01_SwappingFrames {
 	public void test() {
 		// Create a new WebDriver
 		WebDriver driver = new FirefoxDriver();
-		// Create a new WebDriverWait - used to demostrate a second technique
-		// for switching frames
-		WebDriverWait wait = new WebDriverWait(driver, (long) 10.0);
 		// Navigate to the webpage with nested frames
 		driver.get("http://the-internet.herokuapp.com/nested_frames");
 
@@ -111,12 +106,8 @@ public class _01_SwappingFrames {
 		//******************************
 		// Switch to the default content
 		driver.switchTo().defaultContent();
-		/*
-		 * Use the WebDriverWait to wait for the bottom frame to be available
-		 * and then switch to it. This is perhaps the more elegant of the two
-		 * frame-switching solutions
-		 */
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(By.name("frame-bottom"))));
+		// Switch to the top frame
+		driver.switchTo().frame("frame-bottom");
 		// Grab the text from the frame
 		frameText = driver.findElement(By.xpath("/html/body")).getText();
 		// Output the text from the frame
