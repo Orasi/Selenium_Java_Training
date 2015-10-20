@@ -63,6 +63,9 @@ public class _06_UsingDriverFindBy_XPath_Advanced {
 	 * 	"/../"
 	 * Step 3: Click the edit link in the row where the email resides
 	 * 	"/td[@class='action']/a[text()='edit']"
+	 * 
+	 * Full xpath: "//*[@id='table2']/tbody/tr/td[contains(@class,'email') and text()='tconway@earthlink.net']/../td[@class='action']/a[text()='edit']"
+	 *
 	 * HTML from example below
 	 <tr>
         	<td class="last-name">Conway</td>
