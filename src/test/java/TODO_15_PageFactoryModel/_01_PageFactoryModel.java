@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import junit.framework.Assert;
-import pageFactory.apps.bluesource.loginPage.LoginPage;
+import pageFactory.apps.bluesource.loginPage.LoginPageUsingPageFactory;
 import pageFactory.apps.bluesource.navBar.NavBar;
 
 public class _01_PageFactoryModel {
@@ -28,7 +28,7 @@ public class _01_PageFactoryModel {
 	
 	@Test
 	public void test(){
-		LoginPage loginPage = new LoginPage(driver);
+		LoginPageUsingPageFactory loginPage = new LoginPageUsingPageFactory(driver);
 		loginPage.login();
 		
 		NavBar navbar = new NavBar(driver);
