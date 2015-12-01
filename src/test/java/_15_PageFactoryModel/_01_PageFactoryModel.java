@@ -1,4 +1,4 @@
-package TODO_15_PageFactoryModel;
+package _15_PageFactoryModel;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

@@ -1,4 +1,4 @@
-package TODO_16_PageObjectModel;
+package _16_PageObjectModel;
 
 import junit.framework.Assert;
 
